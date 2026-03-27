@@ -155,15 +155,17 @@ const Navbar = () => {
               </li>
             ))}
             <div className="flex space-x-6 mt-2">
-              {links.map((link) => (
-                <li key={link}>
-                  <a
-                    href={`#${link.toLowerCase()}`}
-                    className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
-                  >
-                    {link}
-                  </a>
-                </li>
+              {socialLinks.map(({ icon: Icon, link }, idx) => (
+                <motion.a
+                  key={idx}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variants={item}
+                  className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >
+                  <Icon size={18} />
+                </motion.a>
               ))}
 
               {/* {[FaGithub, FaLinkedin, FaXTwitter].map((Icon, idx) => (

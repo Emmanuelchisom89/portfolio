@@ -11,6 +11,11 @@
   text-align: center;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 
 /* Disable transitions during initial load */
 .no-transition * {

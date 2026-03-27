@@ -1,82 +1,8 @@
-// // src/components/Hero.jsx
-// const Hero = () => {
-//   return (
-//     <section
-//       id="home"
-//       className="min-h-screen flex items-center  bg-linear-to-b from-white to-gray-50"
-//     >
-//       <div className="max-w-5xl mx-auto px-6 lg:px-2 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-//         {/* Text Content */}
-//         <div className="text-center md:text-left">
-//           <p className="font-semibold text-sm uppercase tracking-widest text-gray-500">
-//             Hey there 👋
-//           </p>
-
-//           <h1 className="font-heading mt-3 text-3xl lg:text-4xl text-gray-800 hero-header">
-//             I’m Emmanuel Chisom
-//           </h1>
-
-//           <h2 className="font-heading text-xl sm:text-2xl mt-4 text-gray-700">
-//             Software Engineer & Frontend Specialist
-//           </h2>
-
-//           <p className="font-body text-gray-600 mt-6 max-w-xl mx-auto md:mx-0">
-//             I design and build modern, responsive web applications with clean
-//             user experiences and scalable architecture.
-//           </p>
-
-//           {/* Image / Visual */}
-//           <div className="md:hidden relative flex justify-center mt-10">
-//             {/* Accent Shape */}
-//             <div className="absolute -top-6 -left-6 w-72 h-72 bg-gray-200 rounded-full blur-3xl opacity-40"></div>
-
-//             <img
-//               src="/chisom.jpg"
-//               alt="Profile"
-//               className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-lg"
-//             />
-//           </div>
-
-//           {/* CTA */}
-//           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-//             <a
-//               href="#portfolio"
-//               className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-gray-900 text-white font-medium hover:bg-gray-700 transition"
-//             >
-//               View My Work
-//             </a>
-
-//             <a
-//               href="#contact"
-//               className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-gray-300 text-gray-700 font-medium hover:border-gray-500 transition"
-//             >
-//               Download Resume
-//             </a>
-//           </div>
-//         </div>
-
-//         {/* Image / Visual */}
-//         <div className="hidden relative md:flex justify-center md:justify-end">
-//           {/* Accent Shape */}
-//           <div className="absolute -top-6 -left-6 w-72 h-72 bg-gray-200 rounded-full blur-3xl opacity-40"></div>
-
-//           <img
-//             src="/chisom.jpg"
-//             alt="Profile"
-//             className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl shadow-lg"
-//           />
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Hero;
-
 // src/components/Hero.jsx
 
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "../lib/motion";
+import { FiDownload, FiBriefcase } from "react-icons/fi";
 
 const Hero = () => {
   return (
@@ -167,19 +93,21 @@ const Hero = () => {
               href="#projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-gray-900 text-white dark:bg-white dark:text-black font-medium hover:bg-gray-700 dark:hover:bg-gray-200 transition"
+              className="inline-flex items-center gap-2 justify-center px-6 py-3 rounded-full bg-gray-700 text-white dark:bg-white dark:text-black font-medium hover:bg-gray-700 dark:hover:bg-gray-200 transition"
             >
+              <FiBriefcase />
               View My Work
-            </motion.a>
-
+            </motion.a>{" "}
             <motion.a
-              href="#contact"
+              href="/Agbachukwu Chisom.pdf"
+              download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:border-gray-500 dark:hover:border-gray-500 transition shadow-sm"
+              className="inline-flex items-center gap-2 justify-center px-6 py-3 rounded-full border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-medium hover:border-gray-500 dark:hover:border-gray-500 transition shadow-sm"
             >
+              <FiDownload />
               Download Resume
-            </motion.a>
+            </motion.a>{" "}
           </motion.div>
         </motion.div>
 

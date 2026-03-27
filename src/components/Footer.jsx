@@ -1,78 +1,15 @@
-// import { motion } from "framer-motion";
-// import { Github, Linkedin, Twitter } from "lucide-react";
-
-// const Footer = () => {
-//   return (
-//     <footer className="border-t border-gray-200 py-6 bg-white">
-//       <div className="max-w-5xl mx-auto px-6">
-//         <motion.div
-//           initial={{ opacity: 0 }}
-//           whileInView={{ opacity: 1 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.6 }}
-//           className="flex flex-col sm:flex-row items-center justify-between gap-8"
-//         >
-//           {/* Left */}
-//           <div className="text-center sm:text-left">
-//             <p className="font-semibold text-lg text-gray-900">
-//               Emmanuel Chisom
-//             </p>
-//             <p className="font-body text-sm text-gray-500 mt-1">
-//               Building thoughtful digital experiences.
-//             </p>
-//           </div>
-
-//           {/* Socials */}
-//           <div className="flex items-center gap-6">
-//             <a
-//               href="#"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="text-gray-500 hover:text-gray-900 transition"
-//             >
-//               <Github size={18} />
-//             </a>
-//             <a
-//               href="#"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="text-gray-500 hover:text-gray-900 transition"
-//             >
-//               <Linkedin size={18} />
-//             </a>
-//             <a
-//               href="#"
-//               target="_blank"
-//               rel="noopener noreferrer"
-//               className="text-gray-500 hover:text-gray-900 transition"
-//             >
-//               <Twitter size={18} />
-//             </a>
-//           </div>
-//         </motion.div>
-
-//         {/* Bottom */}
-//         <div className="mt-10 text-center">
-//           <p className="font-body text-xs text-gray-400">
-//             © {new Date().getFullYear()} Emmanuel Chisom. All rights reserved.
-//           </p>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-
 // src/components/Footer.jsx
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter } from "lucide-react";
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
-
+import { Github, Linkedin } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 
 const socialLinks = [
-  { icon: Github, url: "#" },
-  { icon: Linkedin, url: "#" },
-  { icon: Twitter, url: "#" },
+  { icon: Github, url: "https://github.com/Emmanuelchisom89" },
+  {
+    icon: Linkedin,
+    url: "https://www.linkedin.com/in/agbachukwu-chisom-513081288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+  },
+  { icon: FaXTwitter, url: "http://www.twitter.com/ChisomEmmauel" },
 ];
 
 // Animation variants

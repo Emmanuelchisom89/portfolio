@@ -1,110 +1,7 @@
-// // src/components/Navbar.jsx
-// import { useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-// import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
-
-// const Navbar = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const links = ["Home", "About", "Skills", "Portfolio", "Contact"];
-
-//   return (
-//     <nav className="w-full fixed top-0 left-0 z-50 bg-white shadow-md">
-//       <div className="max-w-5xl mx-auto px-6 flex justify-between items-center h-16">
-//         {/* Logo / Name */}
-//         <div className="font-bowlby text-xl font-semibold text-gray-900">
-//           Emmanuel
-//         </div>
-
-//         {/* Desktop Menu */}
-//         <ul className="hidden md:flex space-x-8 font-medium">
-//           {links.map((link) => (
-//             <li key={link}>
-//               <a
-//                 href={`#${link.toLowerCase()}`}
-//                 className="text-gray-700 text-sm hover:text-blue-500 transition-colors duration-200"
-//               >
-//                 {link}
-//               </a>
-//             </li>
-//           ))}
-//         </ul>
-
-//         {/* Social Icons */}
-//         <div className="hidden md:flex space-x-6 text-gray-700">
-//           <a href="#" target="_blank">
-//             <FaGithub size={20} />
-//           </a>
-//           <a href="#" target="_blank">
-//             <FaLinkedin size={20} />
-//           </a>
-//           <a href="#" target="_blank">
-//             <FontAwesomeIcon
-//               icon={faXTwitter}
-//               style={{ fontSize: "17.5" }}
-//               className="text-gray-700 scale-110"
-//             />
-//           </a>
-//         </div>
-
-//         {/* Mobile Menu Button */}
-//         <div className="md:hidden">
-//           <button onClick={() => setIsOpen(!isOpen)}>
-//             <div className="space-y-1">
-//               <span className="block w-6 h-0.5 bg-gray-700"></span>
-//               <span className="block w-6 h-0.5 bg-gray-700"></span>
-//               <span className="block w-6 h-0.5 bg-gray-700"></span>
-//             </div>
-//           </button>
-//         </div>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {isOpen && (
-//         <div className="md:hidden bg-white shadow-lg">
-//           <ul className="flex flex-col items-center space-y-4 py-4 font-medium">
-//             {links.map((link) => (
-//               <li key={link}>
-//                 <a
-//                   href={`#${link.toLowerCase()}`}
-//                   className="text-gray-700 hover:text-blue-500 transition-colors duration-200"
-//                   onClick={() => setIsOpen(false)}
-//                 >
-//                   {link}
-//                 </a>
-//               </li>
-//             ))}
-//             <div className="flex space-x-6 mt-2">
-//               <a href="#" target="_blank">
-//                 <FaGithub size={20} />
-//               </a>
-//               <a href="#" target="_blank">
-//                 <FaLinkedin size={20} />
-//               </a>
-//               <a href="#" target="_blank">
-//                 <FontAwesomeIcon
-//                   icon={faXTwitter}
-//                   style={{ fontSize: "17.5" }}
-//                   className="text-gray-700 scale-110"
-//                 />
-//               </a>
-//             </div>
-//           </ul>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-// src/components/Navbar.jsx
 // src/components/Navbar.jsx
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin, FaTwitter, FaMoon, FaSun } from "react-icons/fa";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -124,7 +21,7 @@ const Navbar = () => {
       icon: FaLinkedin,
       link: "https://www.linkedin.com/in/agbachukwu-chisom-513081288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
-    { icon: FaTwitter, link: "http://www.twitter.com/ChisomEmmauel" },
+    { icon: FaXTwitter, link: "http://www.twitter.com/ChisomEmmauel" },
   ];
 
   // Apply dark mode to <html> and save preference
@@ -192,19 +89,6 @@ const Navbar = () => {
           animate="show"
           className="hidden md:flex items-center space-x-6 text-gray-700 dark:text-gray-300"
         >
-          {/* {[FaGithub, FaLinkedin, FaTwitter].map((Icon, idx) => (
-            <motion.a
-              key={idx}
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              variants={item}
-              className="hover:text-gray-900 dark:hover:text-white transition-colors"
-            >
-              <Icon size={18} />
-            </motion.a>
-          ))} */}
-
           {socialLinks.map(({ icon: Icon, link }, idx) => (
             <motion.a
               key={idx}
@@ -258,7 +142,7 @@ const Navbar = () => {
           transition={{ type: "spring", stiffness: 400, damping: 20 }}
           className="md:hidden bg-white dark:bg-gray-950 shadow-lg transition-colors"
         >
-          <ul className="flex flex-col items-center space-y-4 py-4 font-medium">
+          <ul className="flex flex-col items-center space-y-4 py-10 font-medium">
             {links.map((link) => (
               <li key={link}>
                 <a
@@ -271,7 +155,7 @@ const Navbar = () => {
               </li>
             ))}
             <div className="flex space-x-6 mt-2">
-              {[FaGithub, FaLinkedin, FaTwitter].map((Icon, idx) => (
+              {[FaGithub, FaLinkedin, FaXTwitter].map((Icon, idx) => (
                 <Icon
                   key={idx}
                   size={20}

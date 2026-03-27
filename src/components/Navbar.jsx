@@ -155,13 +155,24 @@ const Navbar = () => {
               </li>
             ))}
             <div className="flex space-x-6 mt-2">
-              {[FaGithub, FaLinkedin, FaXTwitter].map((Icon, idx) => (
+              {links.map((link) => (
+                <li key={link}>
+                  <a
+                    href={`#${link.toLowerCase()}`}
+                    className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
+
+              {/* {[FaGithub, FaLinkedin, FaXTwitter].map((Icon, idx) => (
                 <Icon
                   key={idx}
                   size={20}
                   className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                 />
-              ))}
+              ))} */}
             </div>
           </ul>
         </motion.div>

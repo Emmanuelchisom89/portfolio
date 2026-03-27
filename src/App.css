@@ -12,11 +12,6 @@
 }
 
 
-body {
-  overflow-x: hidden;
-}
-
-
 /* Disable transitions during initial load */
 .no-transition * {
   transition: none !important;

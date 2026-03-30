@@ -19,8 +19,8 @@ const projects = [
     description:
       "A modern, responsive Fashion e-commerce web application using Next.js and TypeScript, focused on performance, scalability, and clean, maintainable UI architecture.",
     tech: ["Next.js", "TypeScript", "Tailwind"],
-    live: "#",
-    github: "#",
+    live: "https://style-pulse-ten.vercel.app",
+    github: "https://style-pulse-ten.vercel.app",
     image: "/stylepulse.png",
   },
   {

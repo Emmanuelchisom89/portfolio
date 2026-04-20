@@ -139,7 +139,7 @@ const skillsData = [
   {
     img: "/back.png",
     title: "Backend Development",
-    skills: ["Node.js", "Express", "Python", "Django"],
+    skills: ["Node.js", "Express"],
   },
   {
     img: "/backend.png",

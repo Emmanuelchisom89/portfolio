@@ -10,7 +10,7 @@ const projects = [
     description:
       "A luxury e-commerce platform for authentic unboxed niche and designer perfumes, featuring scalable architecture, server/client components, SEO-friendly routing, and dynamic metadata.",
     tech: ["Next.js", "TypeScript", "PostgresSQL"],
-    live: "#",
+    live: "https://aurabygivx.vercel.app",
     github: "#",
     image: "/abg.png",
   },

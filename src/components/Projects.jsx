@@ -9,7 +9,7 @@ const projects = [
     title: "Opperax",
     description:
       "A multi-tenant business operations SaaS for managing customers, projects, tasks, and teams in one workspace. Features role-based access, organization-level data isolation, secure authentication, and a scalable backend.",
-    tech: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma"],
+    tech: ["Next.js", "NestJS", "TypeScript", "PostgreSQL"],
     live: "#",
     github: "#",
     image: "/opperax.png",

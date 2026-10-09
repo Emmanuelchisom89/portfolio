@@ -6,6 +6,15 @@ import { useState } from "react";
 
 const projects = [
   {
+    title: "Opperax",
+    description:
+      "A multi-tenant business operations SaaS for managing customers, projects, tasks, and teams in one workspace. Features role-based access, organization-level data isolation, secure authentication, and a scalable backend.",
+    tech: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "Prisma"],
+    live: "#",
+    github: "#",
+    image: "/opperax.png",
+  },
+  {
     title: "Aura by GIVX",
     description:
       "A luxury e-commerce platform for authentic unboxed niche and designer perfumes, featuring scalable architecture, server/client components, SEO-friendly routing, and dynamic metadata.",
